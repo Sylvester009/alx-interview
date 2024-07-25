@@ -14,7 +14,7 @@ def pascal_triangle(n):
             row = []
             c = 1
             for j in range(1, i + 1):
-                level.append(Cc
+                row.append(c)
                 c = c * (i - j) // j
             triangle.append(row)
     return triangle
