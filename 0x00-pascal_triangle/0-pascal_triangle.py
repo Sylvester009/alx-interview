@@ -1,4 +1,8 @@
-# function for pascal triangle
+#!/usr/bin/python3
+
+"""
+ function for pascal triangle
+"""
 def pascal_triangle(n):
     # check if n is lesser than 0
     if n <= 0:
