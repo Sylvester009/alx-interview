@@ -7,21 +7,21 @@ def pascal_triangle(n):
     # check if n is less than or equal to 0
     if n <= 0:
         return []
- 
+
     # initialize the triangle
     triangle = []
- 
-    # first row is always 1  
+
+    # loop through each row in the triangle
     for i in range(n):
         # initialize the row
         row = []
-        C = 1  # starting value for the binomial coefficient
-     
+        c = 1  # starting value for the binomial coefficient
+
         # fill the row with binomial coefficients
         for j in range(i + 1):
-            row.append(C)
-            C = C * (i - j) // (j + 1)
-  
+            row.append(c)
+            c = c * (i - j) // (j + 1)
+
         # add the row to the triangle
         triangle.append(row)
 
