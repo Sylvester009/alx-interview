@@ -23,7 +23,7 @@ def validUTF8(data):
                 bytes_num = 2
             elif (byte >> 3) == 0b11110:
                 bytes_num = 3
-            elif (byte >> 7) == 1:
+            elif (byte >> 7):
                 return False
         else:  # check if it is not a continuation byte
             if (byte >> 6) != 0b10:
