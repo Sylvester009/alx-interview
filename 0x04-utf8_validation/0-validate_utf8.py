@@ -8,7 +8,7 @@ represents a valid UTF-8 encoding.
 
 def validUTF8(data):
     """ Determine if a given data set
-    represents a valid UTF-8 encoding. 
+    represents a valid UTF-8 encoding.
     """
     # number of bytes in current UTF-8 character
     bytes_num = 0
