@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """ UTF-8 Validation
 Python script that determines is a given data set
