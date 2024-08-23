@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 """ UTF-8 Validation
 Python script that determines is a given data set
@@ -7,11 +7,8 @@ represents a valid UTF-8 encoding.
 
 
 def validUTF8(data):
-    """ Determine if a given data set represents a valid UTF-8 encoding.
-      For each byte:
-     Return True if valid, False otherwise.
-     Data set can contain multiple characters.
-     Data will be represented by a list of integers.
+    """ Determine if a given data set
+    represents a valid UTF-8 encoding. 
     """
     # number of bytes in current UTF-8 character
     bytes_num = 0
@@ -26,7 +23,7 @@ def validUTF8(data):
                 bytes_num = 2
             elif (byte >> 3) == 0b11110:
                 bytes_num = 3
-            elif (byte >> 7):
+            elif (byte >> 7) == 1:
                 return False
         else:  # check if it is not a continuation byte
             if (byte >> 6) != 0b10:
