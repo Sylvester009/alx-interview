@@ -25,8 +25,10 @@ def queens(n, i=0, a=[], b=[], c=[]):
     q_positions = []
     for j in range(n):
         if j not in a and i + j not in b and i - j not in c:
-            q_positions.extend(queens(n, i + 1, a + [j], b + [i + j], c + [i - j]))
+            q_positions.extend(
+                queens(n, i + 1, a + [j], b + [i + j], c + [i - j]))
     return q_positions
+
 
 
 def q_solve(n):
