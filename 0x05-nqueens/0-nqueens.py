@@ -30,11 +30,11 @@ def queens(n, i=0, a=[], b=[], c=[]):
     return q_positions
 
 
-
 def q_solve(n):
     """Solve function to print the board positions"""
     q_solutions = queens(n)
     for solution in q_solutions:
         print([[i, solution[i]] for i in range(n)])
+
 
 q_solve(n)
