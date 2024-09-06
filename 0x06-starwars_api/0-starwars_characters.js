@@ -10,7 +10,7 @@ const requestPromise = (url) => {
       if (error) {
         reject(error);
       } else if (response.statusCode !== 200) {
-        reject('Status code:' +  response.statusCode);
+        reject(error);
       } else {
         // Parse JSON
         resolve(JSON.parse(body));
