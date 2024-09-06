@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Import 'request' module for making HTTP request
-const request = require('request');
+const request = require("request");
 
 // Function to make request as a promise
 const requestPromise = (url) => {
@@ -29,9 +29,7 @@ requestPromise(apiUrl)
     const characters = data.characters;
 
     // Make requests for all characters in parallel using Promise.all
-    return Promise.all(
-      characters.map((url) => requestPromise(url))
-    );
+    return Promise.all(characters.map((url) => requestPromise(url)));
   })
   // Extract and print character names
   .then((characterData) => {
@@ -40,5 +38,5 @@ requestPromise(apiUrl)
     });
   })
   .catch((error) => {
-    console.error('Error:', error);
+    console.error("Error:", error);
   });
