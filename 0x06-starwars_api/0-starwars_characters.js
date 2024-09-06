@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Import 'request' module for making HTTP request
-const request = require("request");
+const request = require('request');
 
 // Function to make request as a promise
 const requestPromise = (url) => {
@@ -10,7 +10,7 @@ const requestPromise = (url) => {
       if (error) {
         reject(error);
       } else if (response.statusCode !== 200) {
-        reject(`Status code: ${response.statusCode}`);
+        reject('Status code:' +  response.statusCode);
       } else {
         // Parse JSON
         resolve(JSON.parse(body));
@@ -20,7 +20,7 @@ const requestPromise = (url) => {
 };
 
 // Main logic
-const apiUrl = "https://swapi-api.hbtn.io/api/films/" + process.argv[2];
+const apiUrl = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 // Fetch the movie data
 requestPromise(apiUrl)
@@ -37,5 +37,5 @@ requestPromise(apiUrl)
     });
   })
   .catch((error) => {
-    console.error("Error:", error);
+    console.error('Error:', error);
   });
