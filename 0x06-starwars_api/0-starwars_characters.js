@@ -26,7 +26,6 @@ const apiUrl = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 requestPromise(apiUrl)
   .then((data) => {
     const characters = data.characters;
-
     // Make requests for all characters in parallel using Promise.all
     return Promise.all(characters.map((url) => requestPromise(url)));
   })
