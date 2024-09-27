@@ -2,7 +2,7 @@
 
 """
 Island Perimeter
-returns perimeter of island
+Returns the perimeter of the island.
 """
 
 
@@ -11,25 +11,24 @@ def island_perimeter(grid):
     Calculates the perimeter of the
     island described in grid.
     """
-
     perimeter = 0
-    i, j = 0, 0
-    cols = len(grid)
-    rows = len(grid[0])
+    rows = len(grid)
+    cols = len(grid[0])
 
-    while i < rows:
-        while j < cols:
+    for i in range(rows):
+        for j in range(cols):
             if grid[i][j] == 1:
+
                 if i == 0 or grid[i - 1][j] == 0:
                     perimeter += 1
+
                 if i == rows - 1 or grid[i + 1][j] == 0:
                     perimeter += 1
+
                 if j == 0 or grid[i][j - 1] == 0:
                     perimeter += 1
+
                 if j == cols - 1 or grid[i][j + 1] == 0:
                     perimeter += 1
-            j += 1
-        i += 1
-        j = 0
 
     return perimeter
