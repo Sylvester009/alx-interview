@@ -7,16 +7,16 @@ a set of consecutive integers."""
 
 def isWinner(x, nums):
     """Determines the winner of the Prime Game.
-    
+
     Args:
         x: Number of rounds.
         nums: List of 'n' values for each round.
-        
+
     Returns:
         The name of the player who won the most rounds.
         If no clear winner, return None.
     """
-    
+
     if x <= 0 or nums is None or x != len(nums):
         return None
 
