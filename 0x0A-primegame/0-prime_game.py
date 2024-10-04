@@ -19,6 +19,7 @@ def SieveOfEratosthenes(n):
     prime[0], prime[1] = False, False
     return prime
 
+
 """
 Determine the winner of the Prime Game after x rounds
 """
